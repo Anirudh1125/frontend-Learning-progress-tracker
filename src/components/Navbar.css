@@ -1,0 +1,279 @@
+/* ===============================
+   Navbar – Polished SaaS Header
+   =============================== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.9rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.75rem;
+}
+
+/* ===============================
+   Brand
+   =============================== */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #4f46e5;
+  transition: all 0.25s ease;
+}
+
+.navbar-brand:hover {
+  color: #7c3aed;
+  transform: translateY(-1px);
+}
+
+/* ===============================
+   Nav Links
+   =============================== */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: 0.75rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #4b5563;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+.nav-link.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.35);
+}
+
+/* ===============================
+   Create Goal Button
+   =============================== */
+.nav-link.create-button {
+  margin-left: auto;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+}
+
+.nav-link.create-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(99, 102, 241, 0.5);
+}
+
+/* ===============================
+   User Section
+   =============================== */
+.navbar-user {
+  position: relative;
+}
+
+.user-button {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 9999px;
+  background: white;
+  border: 2px solid #e5e7eb;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.user-button:hover {
+  border-color: #6366f1;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Avatar */
+.user-avatar,
+.user-avatar-placeholder {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.user-avatar {
+  object-fit: cover;
+  border: 2px solid #e5e7eb;
+}
+
+.user-avatar-placeholder {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.user-name {
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ===============================
+   Dropdown Menu
+   =============================== */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  right: 0;
+  min-width: 260px;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e7eb;
+  padding: 0.75rem;
+  animation: dropdownFade 0.2s ease-out;
+  z-index: 1000;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-header {
+  padding: 0.75rem 1rem;
+}
+
+.dropdown-user-name {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #111827;
+}
+
+.dropdown-user-email {
+  font-size: 0.75rem;
+  color: #6b7280;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 0.5rem 0;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 0.75rem;
+  border: none;
+  background: transparent;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.dropdown-item:hover {
+  background: #f9fafb;
+}
+
+/* Logout */
+.logout-item {
+  color: #dc2626;
+}
+
+.logout-item:hover {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+/* ===============================
+   Responsive
+   =============================== */
+@media (max-width: 1024px) {
+  .navbar-container {
+    padding: 0.8rem 1.25rem;
+  }
+
+  .user-name {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0.7rem 1rem;
+    gap: 1rem;
+  }
+
+  .navbar-brand span {
+    display: none;
+  }
+
+  .navbar-links {
+    gap: 0.25rem;
+  }
+
+  .nav-link span {
+    display: none;
+  }
+
+  .nav-link {
+    padding: 0.65rem;
+  }
+
+  .nav-link.create-button {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-links {
+    display: none;
+  }
+}
